@@ -17,6 +17,10 @@ export class CartService {
 
   // adiciona um item ao carrinho
   add(item: any = {}) {
+    this.newItem = {
+      qty: 0,
+      product: {}
+    }
     return new Promise((resolve, reject) => {
       if (!item.id) {
         reject('é necessário um item, esse item dever ter um id');
